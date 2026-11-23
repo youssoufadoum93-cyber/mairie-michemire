@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://statuesque-sorbet-e242c4.netlify.app/sitemap.xml
+Sitemap: https://mairie-michemire.netlify.app/sitemap.xml
