@@ -329,6 +329,14 @@
     align-items:flex-end;
     padding:0.7rem;
   }
+  .plate img.photo{
+    display:block;
+    width:100%;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    border:1px solid var(--line);
+    background:var(--paper-sunken);
+  }
   .plate figcaption{
     margin-top:0.5rem;
     font-size:0.82rem;
@@ -664,37 +672,33 @@
     <h2 style="font-size:1.6rem; margin:0.5rem 0 1.4rem;">Galerie</h2>
     <div class="gallery">
       <figure class="plate">
-        <div class="art" style="background:linear-gradient(160deg,#b9812e,#8c3f2d);">
-        </div>
-        <figcaption><strong>Marché central</strong>Étals et allées couvertes du principal marché de la commune.</figcaption>
+        <img class="photo" src="images/fete-ramadan-palais-cantonal.jpg" alt="Fête du Ramadan au palais cantonal de Michemiré" width="259" height="194" loading="lazy">
+        <figcaption><strong>Fête du Ramadan</strong>Célébration traditionnelle de la fin du Ramadan au palais cantonal de Michemiré.</figcaption>
       </figure>
       <figure class="plate">
-        <div class="art" style="background:linear-gradient(160deg,#1f3a54,#3f6688);">
-        </div>
-        <figcaption><strong>Place de la Mairie</strong>Esplanade devant l'Hôtel de Ville, lieu des cérémonies officielles.</figcaption>
+        <img class="photo" src="images/batiment-michemire.jpg" alt="Bâtiment à toits rouges à Michemiré" width="370" height="250" loading="lazy">
+        <figcaption><strong>Patrimoine bâti</strong>L'un des édifices emblématiques de Michemiré.</figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="photo" src="images/terrain-michemire.jpg" alt="Grand terrain ouvert à Michemiré" width="980" height="350" loading="lazy">
+        <figcaption><strong>Terrain de sport</strong>Espace municipal dédié aux rencontres sportives de quartier.</figcaption>
+      </figure>
+      <figure class="plate">
+        <img class="photo" src="images/route-michemire.jpg" alt="Route bordée d'arbres à Michemiré" width="370" height="250" loading="lazy">
+        <figcaption><strong>Route principale</strong>Axe bordé d'arbres reliant les quartiers de la commune.</figcaption>
       </figure>
       <figure class="plate">
         <div class="art" style="background:linear-gradient(160deg,#6a7f3f,#2f3d1f);">
         </div>
-        <figcaption><strong>École communale</strong>Bâtiment principal du groupe scolaire du quartier Centre.</figcaption>
+        <figcaption><strong>École communale</strong>Bâtiment principal du groupe scolaire de la commune.</figcaption>
       </figure>
       <figure class="plate">
         <div class="art" style="background:linear-gradient(160deg,#3f6688,#16293b);">
         </div>
         <figcaption><strong>Château d'eau</strong>Infrastructure d'approvisionnement en eau potable.</figcaption>
       </figure>
-      <figure class="plate">
-        <div class="art" style="background:linear-gradient(160deg,#a06f22,#4a4438);">
-        </div>
-        <figcaption><strong>Terrain de sport</strong>Espace municipal dédié aux rencontres sportives de quartier.</figcaption>
-      </figure>
-      <figure class="plate">
-        <div class="art" style="background:linear-gradient(160deg,#8c3f2d,#211d16);">
-        </div>
-        <figcaption><strong>Route principale</strong>Axe reliant le quartier Centre aux quartiers périphériques.</figcaption>
-      </figure>
     </div>
-    <p style="margin-top:1.2rem; font-size:0.8rem; color:var(--ink-soft);">Illustrations schématiques &mdash; photographies à venir.</p>
+    <p style="margin-top:1.2rem; font-size:0.8rem; color:var(--ink-soft);">D'autres photographies seront ajoutées prochainement.</p>
   </section>
 
   <section class="page" id="page-contact" data-title="Contact">
