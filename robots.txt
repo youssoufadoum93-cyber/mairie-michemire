@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://youssoufadoum93-cyber.github.io/mairie-michemire/sitemap.xml

@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mairie de Michemiré</title>
+<meta name="description" content="Site officiel de la Mairie de Michemiré, Tchad : démarches d'état civil, services municipaux, actualités et contact de l'Hôtel de Ville.">
+<link rel="canonical" href="https://youssoufadoum93-cyber.github.io/mairie-michemire/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Mairie de Michemiré">
+<meta property="og:title" content="Mairie de Michemiré — Site officiel">
+<meta property="og:description" content="Démarches d'état civil, services municipaux, actualités et contact de l'Hôtel de Ville de Michemiré, Tchad.">
+<meta property="og:url" content="https://youssoufadoum93-cyber.github.io/mairie-michemire/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Ccircle cx='26' cy='26' r='24' fill='%2316293b'/%3E%3Ctext x='26' y='33' text-anchor='middle' font-family='Georgia,serif' font-size='22' fill='%23b9812e'%3EM%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#211d16;
+    --ink-soft:#4a4438;
+    --paper:#efe7d8;
+    --paper-raised:#f8f3e8;
+    --paper-sunken:#e4dac6;
+    --indigo:#1f3a54;
+    --indigo-deep:#16293b;
+    --indigo-tint:#3f6688;
+    --gold:#a06f22;
+    --gold-bright:#b9812e;
+    --clay:#8c3f2d;
+    --line:rgba(33,29,22,0.16);
+    --line-soft:rgba(33,29,22,0.09);
+    --focus:#3f6688;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ink:#ece3d2;
+      --ink-soft:#c1b6a0;
+      --paper:#111c26;
+      --paper-raised:#182531;
+      --paper-sunken:#0c151d;
+      --indigo:#8fb2cf;
+      --indigo-deep:#0c151d;
+      --indigo-tint:#6f97b8;
+      --gold:#d7a350;
+      --gold-bright:#e6b968;
+      --clay:#d68f77;
+      --line:rgba(236,227,210,0.16);
+      --line-soft:rgba(236,227,210,0.08);
+      --focus:#8fb2cf;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ink:#ece3d2;
+    --ink-soft:#c1b6a0;
+    --paper:#111c26;
+    --paper-raised:#182531;
+    --paper-sunken:#0c151d;
+    --indigo:#8fb2cf;
+    --indigo-deep:#0c151d;
+    --indigo-tint:#6f97b8;
+    --gold:#d7a350;
+    --gold-bright:#e6b968;
+    --clay:#d68f77;
+    --line:rgba(236,227,210,0.16);
+    --line-soft:rgba(236,227,210,0.08);
+    --focus:#8fb2cf;
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    font-weight:600;
+    text-wrap:balance;
+    color:var(--ink);
+    margin:0;
+  }
+  a{color:var(--indigo-tint);}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
+    outline:2px solid var(--focus);
+    outline-offset:2px;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  .eyebrow{
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    color:var(--gold);
+    font-weight:600;
+  }
+
+  /* ---------- header / letterhead ---------- */
+  header.letterhead{
+    background:var(--indigo-deep);
+    color:#f2ead9;
+    border-bottom:3px solid var(--gold);
+  }
+  .letterhead-inner{
+    max-width:920px;
+    margin:0 auto;
+    padding:1.1rem 1.5rem 0.9rem;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+  }
+  .seal{flex:0 0 auto;}
+  .letterhead-text{flex:1 1 auto; min-width:0;}
+  .letterhead-text .commune{
+    font-size:0.68rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:#c9d6df;
+    margin-bottom:0.15rem;
+  }
+  .letterhead-text h1{
+    font-size:1.5rem;
+    color:#f6f0e2;
+    line-height:1.15;
+  }
+  .letterhead-text .motto{
+    font-size:0.85rem;
+    color:#d9c592;
+    font-style:italic;
+    margin-top:0.2rem;
+  }
+
+  nav.mainnav{
+    max-width:920px;
+    margin:0 auto;
+    padding:0 1.5rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.2rem 1.4rem;
+    border-top:1px solid rgba(242,234,217,0.14);
+  }
+  nav.mainnav a{
+    display:inline-block;
+    padding:0.7rem 0.05rem 0.6rem;
+    font-size:0.86rem;
+    letter-spacing:0.02em;
+    color:#d9d1bd;
+    text-decoration:none;
+    border-bottom:2px solid transparent;
+  }
+  nav.mainnav a:hover{color:#f6f0e2;}
+  nav.mainnav a.active{
+    color:#f6f0e2;
+    border-bottom-color:var(--gold-bright);
+    font-weight:600;
+  }
+
+  /* ---------- layout ---------- */
+  main{max-width:920px; margin:0 auto; padding:2.2rem 1.5rem 4rem;}
+  .page{display:none;}
+  .page.active{display:block; animation:fade 0.25s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;}}
+
+  .prose{max-width:65ch;}
+  .prose p{margin:0 0 1rem;}
+  .prose p:last-child{margin-bottom:0;}
+
+  /* ---------- accueil ---------- */
+  .hero{
+    padding:1.6rem 0 2rem;
+    border-bottom:1px solid var(--line);
+    margin-bottom:2rem;
+  }
+  .hero h2{font-size:1.9rem; margin-bottom:0.6rem;}
+  .hero .lede{max-width:56ch; color:var(--ink-soft); font-size:1.05rem;}
+  .infostrip{
+    margin-top:1.4rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.5rem 1.6rem;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+  }
+  .infostrip strong{color:var(--ink); font-weight:600;}
+
+  .guichets{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(240px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-bottom:2.4rem;
+  }
+  .guichet{
+    background:var(--paper-raised);
+    padding:1.1rem 1.2rem 1.3rem;
+  }
+  .guichet .num{
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;
+    font-size:0.78rem;
+    color:var(--gold);
+  }
+  .guichet h3{font-size:1.02rem; margin:0.35rem 0 0.4rem;}
+  .guichet p{margin:0; font-size:0.87rem; color:var(--ink-soft);}
+
+  section.section{margin-bottom:2.4rem;}
+  section.section h2{font-size:1.3rem; margin-bottom:0.9rem;}
+
+  /* ---------- content pages ---------- */
+  .quote{
+    border-left:3px solid var(--gold);
+    padding:0.2rem 0 0.2rem 1.1rem;
+    margin:1.6rem 0;
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;
+    font-size:1.12rem;
+    font-style:italic;
+    color:var(--ink);
+  }
+  .signature{margin-top:0.4rem; font-size:0.85rem; color:var(--ink-soft); font-style:normal;}
+
+  .servicelist{list-style:none; margin:0; padding:0;}
+  .servicelist li{
+    padding:1rem 0;
+    border-top:1px solid var(--line-soft);
+    display:grid;
+    grid-template-columns:2fr 3fr;
+    gap:0.3rem 1.5rem;
+  }
+  .servicelist li:last-child{border-bottom:1px solid var(--line-soft);}
+  .servicelist h3{font-size:1rem; font-weight:600;}
+  .servicelist p{margin:0; font-size:0.9rem; color:var(--ink-soft);}
+  @media (max-width:600px){
+    .servicelist li{grid-template-columns:1fr;}
+  }
+
+  .actecard{
+    border:1px solid var(--line);
+    background:var(--paper-raised);
+    padding:1.3rem 1.4rem 1.5rem;
+    margin-bottom:1.3rem;
+  }
+  .actecard h3{font-size:1.1rem; margin-bottom:0.2rem;}
+  .actecard .who{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    margin-bottom:1rem;
+  }
+  ol.steps{
+    list-style:none;
+    counter-reset:step;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:0.7rem;
+  }
+  ol.steps li{
+    counter-increment:step;
+    display:grid;
+    grid-template-columns:1.7rem 1fr;
+    gap:0.7rem;
+    font-size:0.9rem;
+  }
+  ol.steps li::before{
+    content:counter(step);
+    font-family:"Iowan Old Style","Palatino Linotype",Georgia,serif;
+    color:var(--gold);
+    font-size:0.9rem;
+    line-height:1.5;
+  }
+  ol.steps strong{color:var(--ink); font-weight:600;}
+  .acte-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.4rem 1.4rem;
+    margin-top:1rem;
+    padding-top:0.9rem;
+    border-top:1px solid var(--line-soft);
+    font-size:0.82rem;
+    color:var(--ink-soft);
+  }
+  .acte-meta strong{color:var(--ink); font-weight:600;}
+
+  .newslist{list-style:none; margin:0; padding:0;}
+  .newsitem{
+    display:grid;
+    grid-template-columns:8.5rem 1fr;
+    gap:0.3rem 1.3rem;
+    padding:1.1rem 0;
+    border-top:1px solid var(--line-soft);
+  }
+  .newsitem:last-child{border-bottom:1px solid var(--line-soft);}
+  .newsitem time{
+    font-size:0.78rem;
+    letter-spacing:0.04em;
+    color:var(--gold);
+    font-variant-numeric:tabular-nums;
+    padding-top:0.15rem;
+  }
+  .newsitem h3{font-size:1rem; margin:0 0 0.3rem;}
+  .newsitem p{margin:0; font-size:0.9rem; color:var(--ink-soft);}
+  .tag{
+    display:inline-block;
+    font-size:0.66rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    padding:0.1rem 0.45rem;
+    border:1px solid var(--line);
+    border-radius:2px;
+    color:var(--ink-soft);
+    margin-bottom:0.4rem;
+  }
+  .tag.urgent{color:var(--clay); border-color:var(--clay);}
+
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(200px,1fr));
+    gap:1rem;
+  }
+  figure.plate{margin:0;}
+  .plate .art{
+    aspect-ratio:4/3;
+    border:1px solid var(--line);
+    display:flex;
+    align-items:flex-end;
+    padding:0.7rem;
+  }
+  .plate figcaption{
+    margin-top:0.5rem;
+    font-size:0.82rem;
+    color:var(--ink-soft);
+  }
+  .plate figcaption strong{display:block; color:var(--ink); font-size:0.88rem; font-weight:600;}
+
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.4rem;
+  }
+  @media (max-width:640px){ .contact-grid{grid-template-columns:1fr;} }
+  dl.contactinfo{margin:0;}
+  dl.contactinfo div{
+    display:flex;
+    gap:0.9rem;
+    padding:0.7rem 0;
+    border-top:1px solid var(--line-soft);
+  }
+  dl.contactinfo div:first-child{border-top:none;}
+  dl.contactinfo dt{
+    flex:0 0 7rem;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--gold);
+    padding-top:0.15rem;
+  }
+  dl.contactinfo dd{margin:0; font-size:0.92rem;}
+
+  table.horaires{
+    border-collapse:collapse;
+    width:100%;
+    font-size:0.9rem;
+    margin-top:0.6rem;
+  }
+  table.horaires th{
+    text-align:left;
+    font-size:0.7rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    padding:0.4rem 0.6rem 0.4rem 0;
+    border-bottom:1px solid var(--line);
+  }
+  table.horaires td{
+    padding:0.5rem 0.6rem 0.5rem 0;
+    border-bottom:1px solid var(--line-soft);
+    font-variant-numeric:tabular-nums;
+  }
+
+  .btn{
+    display:inline-block;
+    background:var(--indigo);
+    color:#f6f0e2;
+    padding:0.65rem 1.2rem;
+    text-decoration:none;
+    font-size:0.9rem;
+    font-weight:600;
+    border:1px solid var(--indigo);
+    margin-top:1.2rem;
+  }
+  .btn:hover{background:var(--indigo-deep); border-color:var(--indigo-deep);}
+
+  footer{
+    border-top:1px solid var(--line);
+    background:var(--paper-sunken);
+  }
+  .footer-inner{
+    max-width:920px; margin:0 auto; padding:1.6rem 1.5rem;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;
+    font-size:0.78rem; color:var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header class="letterhead">
+  <div class="letterhead-inner">
+    <svg class="seal" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+      <circle cx="26" cy="26" r="24" fill="none" stroke="#b9812e" stroke-width="1.4"/>
+      <circle cx="26" cy="26" r="19" fill="none" stroke="#b9812e" stroke-width="0.8"/>
+      <text x="26" y="32" text-anchor="middle" font-family="Iowan Old Style, Georgia, serif" font-size="20" fill="#f2ead9">M</text>
+      <path d="M10 26a16 16 0 0 1 32 0" fill="none" stroke="#b9812e" stroke-width="0.8" stroke-dasharray="1.5 2.5"/>
+    </svg>
+    <div class="letterhead-text">
+      <div class="commune">Commune de Michemiré &middot; République du Tchad</div>
+      <h1>Mairie de Michemiré</h1>
+      <div class="motto">Dignité &middot; Solidarité &middot; Avenir</div>
+    </div>
+  </div>
+  <nav class="mainnav" id="mainnav">
+    <a href="#accueil" data-page="accueil">Accueil</a>
+    <a href="#presentation" data-page="presentation">La mairie</a>
+    <a href="#services" data-page="services">Services</a>
+    <a href="#demarches" data-page="demarches">Démarches</a>
+    <a href="#actualites" data-page="actualites">Actualités</a>
+    <a href="#galerie" data-page="galerie">Galerie</a>
+    <a href="#contact" data-page="contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="page" id="page-accueil" data-title="Accueil">
+    <div class="hero">
+      <span class="eyebrow">Bienvenue</span>
+      <h2>Au service des habitants de Michemiré</h2>
+      <p class="lede">Retrouvez ici les démarches administratives, les actualités de la commune et les coordonnées de vos services municipaux.</p>
+      <div class="infostrip">
+        <span><strong>Guichets ouverts :</strong> lun.&ndash;ven. 7h30&ndash;15h30</span>
+        <span><strong>Adresse :</strong> Quartier Toudjour</span>
+        <span><strong>Téléphone :</strong> 99 19 50 50</span>
+      </div>
+    </div>
+
+    <span class="eyebrow">Nos guichets</span>
+    <h2 style="font-size:1.3rem; margin:0.5rem 0 1rem;">Démarches et services municipaux</h2>
+    <div class="guichets">
+      <div class="guichet">
+        <div class="num">01</div>
+        <h3>État civil</h3>
+        <p>Actes de naissance, mariage, décès et légalisations.</p>
+      </div>
+      <div class="guichet">
+        <div class="num">02</div>
+        <h3>Urbanisme &amp; Habitat</h3>
+        <p>Permis de construire, cadastre, alignement des parcelles.</p>
+      </div>
+      <div class="guichet">
+        <div class="num">03</div>
+        <h3>Affaires sociales</h3>
+        <p>Aide aux familles, cantines scolaires, soutien aux personnes vulnérables.</p>
+      </div>
+      <div class="guichet">
+        <div class="num">04</div>
+        <h3>Hygiène &amp; Environnement</h3>
+        <p>Assainissement, collecte des déchets, salubrité des marchés.</p>
+      </div>
+      <div class="guichet">
+        <div class="num">05</div>
+        <h3>Développement économique</h3>
+        <p>Marché municipal, cartes de commerçant, appui à l'artisanat.</p>
+      </div>
+      <div class="guichet">
+        <div class="num">06</div>
+        <h3>Sécurité civile</h3>
+        <p>Coordination avec la protection civile, gestion des risques saisonniers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" id="page-presentation" data-title="La mairie">
+    <span class="eyebrow">Présentation</span>
+    <h2 style="font-size:1.6rem; margin:0.5rem 0 1.4rem;">Mot du Maire</h2>
+    <div class="prose">
+      <p>Chers habitants de Michemiré,</p>
+      <p>Michemiré est une commune en plein essor, portée par le dynamisme de son marché, de ses écoles et de ses quartiers. Notre administration s'engage à rapprocher les services publics des familles, à moderniser les infrastructures et à préparer chaque saison des pluies avec sérieux.</p>
+      <p>Ce site présente nos services, nos actualités et les moyens de nous contacter. Nous restons à votre écoute pour construire, ensemble, l'avenir de notre commune.</p>
+      <div class="quote">
+        « Une administration proche des gens est une administration qui tient ses promesses. »
+        <div class="signature">— Le Maire de Michemiré</div>
+      </div>
+    </div>
+
+    <div style="margin-top:2.4rem;">
+      <span class="eyebrow">Organisation</span>
+      <h2 style="font-size:1.15rem; margin:0.5rem 0 0.8rem;">Le conseil municipal</h2>
+      <p class="prose" style="color:var(--ink-soft); font-size:0.92rem;">Le conseil municipal de Michemiré compte 21 conseillers élus, répartis en six commissions correspondant aux guichets de services présentés sur ce site. Il se réunit en session ordinaire chaque trimestre à l'Hôtel de Ville.</p>
+    </div>
+  </section>
+
+  <section class="page" id="page-services" data-title="Services">
+    <span class="eyebrow">Démarches</span>
+    <h2 style="font-size:1.6rem; margin:0.5rem 0 1.4rem;">Nos services</h2>
+    <ul class="servicelist">
+      <li>
+        <h3>État civil</h3>
+        <p>Délivrance des actes de naissance, mariage et décès. Légalisation de documents. Pièces à fournir : livret de famille ou pièce d'identité. Délai moyen : 48h.</p>
+      </li>
+      <li>
+        <h3>Urbanisme &amp; Habitat</h3>
+        <p>Dépôt et instruction des permis de construire, consultation du cadastre communal, bornage et alignement des parcelles.</p>
+      </li>
+      <li>
+        <h3>Affaires sociales</h3>
+        <p>Inscription aux cantines scolaires, orientation vers les aides aux familles, accompagnement des personnes en situation de handicap.</p>
+      </li>
+      <li>
+        <h3>Hygiène &amp; Environnement</h3>
+        <p>Programme de collecte des déchets par quartier, contrôle sanitaire des points de vente, campagnes d'assainissement avant la saison des pluies.</p>
+      </li>
+      <li>
+        <h3>Développement économique</h3>
+        <p>Attribution des places au marché municipal, délivrance des cartes de commerçant, appui aux groupements d'artisans.</p>
+      </li>
+      <li>
+        <h3>Sécurité civile</h3>
+        <p>Coordination avec la protection civile régionale, plan communal de gestion des inondations et des feux de brousse.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="page" id="page-demarches" data-title="Démarches">
+    <span class="eyebrow">État civil</span>
+    <h2 style="font-size:1.6rem; margin:0.5rem 0 0.6rem;">Demander un acte</h2>
+    <p class="prose" style="color:var(--ink-soft); font-size:0.92rem; margin-bottom:1.8rem;">Les actes de naissance, de mariage et de décès se demandent en personne au guichet État civil de l'Hôtel de Ville. Voici la marche à suivre pour chacun.</p>
+
+    <div class="actecard">
+      <h3>Acte de naissance</h3>
+      <div class="who">Pour la personne concernée, ses parents (si mineure), ou un représentant muni d'une procuration.</div>
+      <ol class="steps">
+        <li><span><strong>Réunir les pièces</strong> — une pièce d'identité, et si possible le livret de famille ou un acte déjà existant.</span></li>
+        <li><span><strong>Se présenter au guichet État civil</strong> aux horaires d'ouverture, avec les noms complets, la date et le lieu de naissance exacts.</span></li>
+        <li><span><strong>Remplir la fiche de demande</strong> fournie sur place par l'agent d'accueil.</span></li>
+        <li><span><strong>Retirer l'acte</strong> — délivré sur place si le registre est disponible, sinon sous 48h.</span></li>
+      </ol>
+      <div class="acte-meta">
+        <span><strong>Délai :</strong> immédiat à 48h</span>
+        <span><strong>Coût :</strong> gratuit</span>
+        <span><strong>Guichet :</strong> État civil, Hôtel de Ville</span>
+      </div>
+    </div>
+
+    <div class="actecard">
+      <h3>Acte de mariage</h3>
+      <div class="who">Pour l'un des époux, ou un représentant muni d'une procuration.</div>
+      <ol class="steps">
+        <li><span><strong>Réunir les pièces</strong> — une pièce d'identité et la date, le lieu du mariage ainsi que les noms complets des deux époux.</span></li>
+        <li><span><strong>Se présenter au guichet État civil</strong> aux horaires d'ouverture.</span></li>
+        <li><span><strong>Remplir la fiche de demande</strong> fournie sur place.</span></li>
+        <li><span><strong>Retirer l'acte</strong> — délivré sur place si le registre est disponible, sinon sous 48h.</span></li>
+      </ol>
+      <div class="acte-meta">
+        <span><strong>Délai :</strong> immédiat à 48h</span>
+        <span><strong>Coût :</strong> gratuit</span>
+        <span><strong>Guichet :</strong> État civil, Hôtel de Ville</span>
+      </div>
+    </div>
+
+    <div class="actecard">
+      <h3>Acte de décès</h3>
+      <div class="who">Pour un proche du défunt ou un représentant muni d'une procuration.</div>
+      <ol class="steps">
+        <li><span><strong>Réunir les pièces</strong> — une pièce d'identité du déclarant, ainsi que le nom complet, la date et le lieu de décès.</span></li>
+        <li><span><strong>Se présenter au guichet État civil</strong> aux horaires d'ouverture.</span></li>
+        <li><span><strong>Remplir la fiche de demande</strong> fournie sur place.</span></li>
+        <li><span><strong>Retirer l'acte</strong> — délivré sur place si le registre est disponible, sinon sous 48h.</span></li>
+      </ol>
+      <div class="acte-meta">
+        <span><strong>Délai :</strong> immédiat à 48h</span>
+        <span><strong>Coût :</strong> gratuit</span>
+        <span><strong>Guichet :</strong> État civil, Hôtel de Ville</span>
+      </div>
+    </div>
+
+    <p style="margin-top:0.4rem; font-size:0.82rem; color:var(--ink-soft);">Le guichet État civil est ouvert lundi–jeudi 7h30–15h30, vendredi 7h30–12h00, et samedi 8h00–12h00. Voir la page <a href="#contact">Contact</a> pour l'adresse complète.</p>
+  </section>
+
+  <section class="page" id="page-actualites" data-title="Actualités">
+    <span class="eyebrow">Vie communale</span>
+    <h2 style="font-size:1.6rem; margin:0.5rem 0 1.4rem;">Actualités &amp; annonces</h2>
+    <ul class="newslist">
+      <li class="newsitem">
+        <time datetime="2026-08-12">12 août 2026</time>
+        <div>
+          <span class="tag urgent">Travaux</span>
+          <h3>Réhabilitation du marché central</h3>
+          <p>Début des travaux de réfection des allées et des points d'eau. Accès maintenu par l'entrée nord jusqu'à fin octobre.</p>
+        </div>
+      </li>
+      <li class="newsitem">
+        <time datetime="2026-07-28">28 juillet 2026</time>
+        <div>
+          <span class="tag">Santé</span>
+          <h3>Campagne de vaccination gratuite</h3>
+          <p>Le centre de santé communal organise une campagne de vaccination infantile du 28 juillet au 2 août, de 8h à 13h.</p>
+        </div>
+      </li>
+      <li class="newsitem">
+        <time datetime="2026-07-15">15 juillet 2026</time>
+        <div>
+          <span class="tag">Commerce</span>
+          <h3>Recensement des commerçants</h3>
+          <p>Les nouveaux commerçants du marché sont invités à se faire recenser au guichet Développement économique avant le 30 août pour obtenir leur carte professionnelle.</p>
+        </div>
+      </li>
+      <li class="newsitem">
+        <time datetime="2026-06-30">30 juin 2026</time>
+        <div>
+          <span class="tag">Réunion publique</span>
+          <h3>Plan d'assainissement de la saison des pluies</h3>
+          <p>Réunion publique à l'Hôtel de Ville pour présenter le plan de drainage des quartiers les plus exposés aux inondations.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="page" id="page-galerie" data-title="Galerie">
+    <span class="eyebrow">Michemiré en images</span>
+    <h2 style="font-size:1.6rem; margin:0.5rem 0 1.4rem;">Galerie</h2>
+    <div class="gallery">
+      <figure class="plate">
+        <div class="art" style="background:linear-gradient(160deg,#b9812e,#8c3f2d);">
+        </div>
+        <figcaption><strong>Marché central</strong>Étals et allées couvertes du principal marché de la commune.</figcaption>
+      </figure>
+      <figure class="plate">
+        <div class="art" style="background:linear-gradient(160deg,#1f3a54,#3f6688);">
+        </div>
+        <figcaption><strong>Place de la Mairie</strong>Esplanade devant l'Hôtel de Ville, lieu des cérémonies officielles.</figcaption>
+      </figure>
+      <figure class="plate">
+        <div class="art" style="background:linear-gradient(160deg,#6a7f3f,#2f3d1f);">
+        </div>
+        <figcaption><strong>École communale</strong>Bâtiment principal du groupe scolaire du quartier Centre.</figcaption>
+      </figure>
+      <figure class="plate">
+        <div class="art" style="background:linear-gradient(160deg,#3f6688,#16293b);">
+        </div>
+        <figcaption><strong>Château d'eau</strong>Infrastructure d'approvisionnement en eau potable.</figcaption>
+      </figure>
+      <figure class="plate">
+        <div class="art" style="background:linear-gradient(160deg,#a06f22,#4a4438);">
+        </div>
+        <figcaption><strong>Terrain de sport</strong>Espace municipal dédié aux rencontres sportives de quartier.</figcaption>
+      </figure>
+      <figure class="plate">
+        <div class="art" style="background:linear-gradient(160deg,#8c3f2d,#211d16);">
+        </div>
+        <figcaption><strong>Route principale</strong>Axe reliant le quartier Centre aux quartiers périphériques.</figcaption>
+      </figure>
+    </div>
+    <p style="margin-top:1.2rem; font-size:0.8rem; color:var(--ink-soft);">Illustrations schématiques &mdash; photographies à venir.</p>
+  </section>
+
+  <section class="page" id="page-contact" data-title="Contact">
+    <span class="eyebrow">Nous contacter</span>
+    <h2 style="font-size:1.6rem; margin:0.5rem 0 1.4rem;">Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <dl class="contactinfo">
+          <div>
+            <dt>Adresse</dt>
+            <dd>Hôtel de Ville, Quartier Toudjour<br>Michemiré, Tchad</dd>
+          </div>
+          <div>
+            <dt>Téléphone</dt>
+            <dd>99 19 50 50</dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd>youssouf.adoum93@gmail.com</dd>
+          </div>
+        </dl>
+        <a class="btn" href="mailto:youssouf.adoum93@gmail.com?subject=Demande%20via%20le%20site">Écrire à la mairie</a>
+        <p style="margin-top:0.6rem; font-size:0.78rem; color:var(--ink-soft);">Le bouton ouvre votre application mail par défaut. Si rien ne s'ouvre, écrivez directement à l'adresse ci-dessus.</p>
+      </div>
+      <div>
+        <span class="eyebrow">Horaires des guichets</span>
+        <table class="horaires">
+          <thead>
+            <tr><th>Jour</th><th>Horaires</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Lundi &ndash; Jeudi</td><td>7h30 &ndash; 15h30</td></tr>
+            <tr><td>Vendredi</td><td>7h30 &ndash; 12h00</td></tr>
+            <tr><td>Samedi</td><td>8h00 &ndash; 12h00 (état civil)</td></tr>
+            <tr><td>Dimanche</td><td>Fermé</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>&copy; 2026 Mairie de Michemiré</span>
+    <span>Hôtel de Ville &middot; Quartier Toudjour &middot; Michemiré, Tchad</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var pages = document.querySelectorAll('.page');
+    var links = document.querySelectorAll('#mainnav a');
+    var baseTitle = 'Mairie de Michemiré';
+
+    function show(id){
+      var found = false;
+      pages.forEach(function(p){
+        var match = p.id === 'page-' + id;
+        p.classList.toggle('active', match);
+        if(match){ found = true; document.title = p.dataset.title + ' — ' + baseTitle; }
+      });
+      if(!found){
+        pages[0].classList.add('active');
+        document.title = pages[0].dataset.title + ' — ' + baseTitle;
+        id = 'accueil';
+      }
+      links.forEach(function(a){
+        a.classList.toggle('active', a.dataset.page === id);
+      });
+      window.scrollTo(0,0);
+    }
+
+    function route(){
+      var id = (location.hash || '#accueil').replace('#','');
+      show(id);
+    }
+
+    window.addEventListener('hashchange', route);
+    route();
+  })();
+</script>
+</body>
+</html>
