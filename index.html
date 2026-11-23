@@ -792,5 +792,108 @@
     route();
   })();
 </script>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie" hidden>
+  <button type="button" class="lb-btn lb-close" aria-label="Fermer">&times;</button>
+  <button type="button" class="lb-btn lb-prev" aria-label="Photo précédente">&#8249;</button>
+  <figure class="lb-figure">
+    <img class="lb-img" alt="">
+    <figcaption class="lb-caption"></figcaption>
+  </figure>
+  <button type="button" class="lb-btn lb-next" aria-label="Photo suivante">&#8250;</button>
+</div>
+<style>
+  .plate img.photo{cursor:zoom-in; transition:opacity .15s;}
+  .plate img.photo:hover{opacity:.88;}
+  .lightbox{
+    position:fixed; inset:0; z-index:1000;
+    background:rgba(10,12,16,0.93);
+    display:flex; align-items:center; justify-content:center;
+    padding:3.5rem 3.5rem 1.5rem;
+  }
+  .lightbox[hidden]{display:none;}
+  .lb-figure{margin:0; max-width:100%; max-height:100%; display:flex; flex-direction:column; align-items:center;}
+  .lb-img{
+    max-width:min(100%, 1100px);
+    max-height:calc(100vh - 9rem);
+    width:auto; height:auto;
+    min-width:min(70vw, 640px);
+    object-fit:contain;
+    box-shadow:0 10px 40px rgba(0,0,0,.5);
+  }
+  .lb-caption{color:#ece3d2; text-align:center; margin-top:0.9rem; font-size:0.92rem; max-width:640px; line-height:1.45;}
+  .lb-caption strong{display:block; font-size:1rem; margin-bottom:0.2rem;}
+  .lb-btn{
+    position:absolute; border:0; cursor:pointer;
+    background:rgba(255,255,255,0.12); color:#fff;
+    width:44px; height:44px; border-radius:50%;
+    font-size:1.8rem; line-height:44px; padding:0;
+  }
+  .lb-btn:hover,.lb-btn:focus-visible{background:rgba(255,255,255,0.28); outline:none;}
+  .lb-close{top:0.8rem; right:0.8rem;}
+  .lb-prev{left:0.8rem; top:50%; transform:translateY(-50%);}
+  .lb-next{right:0.8rem; top:50%; transform:translateY(-50%);}
+  @media (max-width:600px){
+    .lightbox{padding:3.5rem 0.5rem 1rem;}
+    .lb-img{min-width:0; max-width:100%;}
+    .lb-prev,.lb-next{top:auto; bottom:1rem; transform:none;}
+  }
+</style>
+<script>
+  (function(){
+    var box = document.getElementById('lightbox');
+    var img = box.querySelector('.lb-img');
+    var cap = box.querySelector('.lb-caption');
+    var photos = Array.prototype.slice.call(document.querySelectorAll('.gallery img.photo'));
+    var current = 0, lastFocus = null;
+
+    function render(){
+      var p = photos[current];
+      img.src = p.currentSrc || p.src;
+      img.alt = p.alt;
+      var fc = p.parentNode.querySelector('figcaption');
+      cap.innerHTML = fc ? fc.innerHTML : '';
+    }
+    function open(i){
+      current = i; render();
+      lastFocus = document.activeElement;
+      box.hidden = false;
+      document.body.style.overflow = 'hidden';
+      box.querySelector('.lb-close').focus();
+    }
+    function close(){
+      box.hidden = true;
+      document.body.style.overflow = '';
+      if(lastFocus) lastFocus.focus();
+    }
+    function step(d){ current = (current + d + photos.length) % photos.length; render(); }
+
+    photos.forEach(function(p, i){
+      p.tabIndex = 0;
+      p.setAttribute('role', 'button');
+      p.addEventListener('click', function(){ open(i); });
+      p.addEventListener('keydown', function(e){ if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); open(i); } });
+    });
+    box.querySelector('.lb-close').addEventListener('click', close);
+    box.querySelector('.lb-prev').addEventListener('click', function(e){ e.stopPropagation(); step(-1); });
+    box.querySelector('.lb-next').addEventListener('click', function(e){ e.stopPropagation(); step(1); });
+    box.addEventListener('click', function(e){ if(e.target === box) close(); });
+    document.addEventListener('keydown', function(e){
+      if(box.hidden) return;
+      if(e.key === 'Escape') close();
+      else if(e.key === 'ArrowLeft') step(-1);
+      else if(e.key === 'ArrowRight') step(1);
+    });
+    // Glisser le doigt sur téléphone
+    var x0 = null;
+    box.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+    box.addEventListener('touchend', function(e){
+      if(x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0; x0 = null;
+      if(Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
+    });
+    window.addEventListener('hashchange', function(){ if(!box.hidden) close(); });
+  })();
+</script>
 </body>
 </html>
